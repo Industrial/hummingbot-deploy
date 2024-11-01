@@ -59,7 +59,20 @@ services:
       interval: 5s
       timeout: 25s
       retries: 5
-
+  gateway:
+    container_name: gateway
+    image: hummingbot/gateway:latest
+    ports:
+      - "15888:15888"
+      - "8080:8080"
+    volumes:
+      - "./bots/gateway_files/conf:/home/gateway/conf"
+      - "./bots/gateway_files/logs:/home/gateway/logs"
+      - "./bots/gateway_files/db:/home/gateway/db"
+      - "./bots/certs:/home/gateway/certs"
+    environment:
+      - GATEWAY_PASSPHRASE=a
+ 
 networks:
   emqx-bridge:
     driver: bridge
