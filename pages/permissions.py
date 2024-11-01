@@ -20,6 +20,8 @@ def public_pages():
         Section("Community Pages", "👨‍👩‍👧‍👦"),
         Page("frontend/pages/data/token_spreads/app.py", "Token Spreads", "🧙"),
         Page("frontend/pages/data/tvl_vs_mcap/app.py", "TVL vs Market Cap", "🦉"),
+        Section("Custom Pages", "🧍"),
+        Page("frontend/pages/custom/seed_generator/app.py", "Seed Generator", "🌱"),
     ]
 
 
